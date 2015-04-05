@@ -13,15 +13,17 @@ using namespace std;
 
 int main() {
 
-	BinaryHeap heap(true);
-	heap.insert(3);
-	heap.insert(6);
-	heap.insert(19);
-	heap.insert(45);
+	BinaryHeap<float> heap(true);
+	heap.insert(3.);
+	heap.insert(6.);
+	heap.insert(19.);
+	heap.insert(45.);
+	heap.insert(4);
 	heap.print();
-	std::cout << "root: " << heap.extractRoot() << endl;
-	std::cout << "root: " << heap.extractRoot() << endl;
-	std::cout << "root: " << heap.extractRoot() << endl;
-	std::cout << "root: " << heap.extractRoot() << endl;
+
+	float* array=heap.getHeapSortedArray();
+	for(int i=0; i<5; i++){
+		cout << array[i] << " ";
+	}
 	return 0;
 }
